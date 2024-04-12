@@ -1,0 +1,19 @@
+.menu {
+    background-color: rgb(245, 175, 175);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.gato2 {
+    text-align: left; /* Alinea el texto a la izquierda */
+    display: inline-block; /* Hace que el div se comporte como un elemento en línea */
+    padding-right: 300px; /* Espacio interno alrededor del contenido */
+    padding-left: 20px;
+}
+.gato1 {
+    text-align: right; /* Alinea el texto a la izquierda */
+    display: inline-block; /* Hace que el div se comporte como un elemento en línea */
+    padding-left: 130px;    
+    position: relative;
+    bottom: 25px;
+    ;
+}
