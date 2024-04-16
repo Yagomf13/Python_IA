@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(226, 226, 226);
+    font-family: Tahoma;
+    font-size: 14px;
+}
+h1, p {
+    text-align: center;
+}
+form {
+    width: 670vw;
+    max-width: 600px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+fieldset {
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid black;
+}
