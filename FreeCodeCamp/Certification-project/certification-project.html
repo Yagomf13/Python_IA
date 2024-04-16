@@ -9,8 +9,8 @@
 <body>
 
     <h1 id="title">Formulario admisión Clash Royale</h1>
-    <p id="description">Rellena este formulario para admisión a clan </p>
-    <form action="post" id="survey-form">
+    <p id="description">Rellena este formulario para admisión al clan </p>
+    <form action="https://t4.ftcdn.net/jpg/02/81/89/19/360_F_281891915_4mwdjKSqryVzqSH7PpWsM4gXSbkQPlJJ.jpg" id="survey-form">
 
         <fieldset>
             <label for="name" id="name-label">Introduce tu nombre: 
@@ -19,8 +19,8 @@
             <label for="email" id="email-label">Introduce tu correo electronico: 
                 <input type="email" name="email" id="email" required placeholder="Introduce tu email">
             </label>
-            <label for="number" id="number-label">Escoge un numero entre 0 y 99: 
-                <input type="number" name="number" id="number" required min="0" max="99" placeholder="Introduce un número">
+            <label for="number" id="number-label">Introduce tu edad: 
+                <input type="number" name="number" id="number" required min="0" max="110" placeholder="Introduce tu edad">
             </label>
         </fieldset>
 
@@ -37,23 +37,24 @@
         </fieldset>
 
         <fieldset>
-            <label for="radio" >Mano dominante:
+            <legend>Mano dominante:</legend>
                 <input type="radio" name="mano" id="izquierda" class="inline" checked value="5"> Izquierda
                 <input type="radio" name="mano" id="derecha" class="inline" value="6"> Derecha
                 <input type="radio" name="mano" id="ambidiestro" class="inline" value="7"> Ambidiestro
             </label>
-    
-            <label for="checkbox" >Consolas (Si no tienes ninguna no marques nada):
-                <input type="checkbox" name="pc" id="pc" value="8"> PeCe
-                <input type="checkbox" name="xbox" id="xbox" value="9"> EquisBox
-                <input type="checkbox" name="ps" id="ps" value="10"> PleyEstation
-                <input type="checkbox" name="otra" id="otra" value="11"> Otra
+        </fieldset>
+        <fieldset>
+            <legend>Consolas (Si no tienes ninguna no marques nada):</legend>
+                <input type="checkbox" name="pc" id="pc" value="8" class="inline"> PeCe
+                <input type="checkbox" name="xbox" id="xbox" value="9" class="inline"> EquisBox
+                <input type="checkbox" name="ps" id="ps" value="10" class="inline"> PleyEstation
+                <input type="checkbox" name="otra" id="otra" value="11" class="inline"> Otra
             </label>
         </fieldset>
 
         <fieldset>
-            <label for="comentario">Propuestas de mejora: 
-                <textarea id="comentario" name="comentario" rows="3" cols="30" placeholder="Introduce comentarios para mejorar..."></textarea>
+            <legend>Propuestas de mejora</legend>
+            <textarea id="comentario" name="comentario" rows="3" cols="50" placeholder="Introduce comentarios para mejorar..."></textarea>
             </label>
         </fieldset>
 

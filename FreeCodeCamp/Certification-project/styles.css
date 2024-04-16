@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(176, 176, 176);
     font-family: Tahoma;
     font-size: 14px;
 }
@@ -9,11 +9,44 @@ h1, p {
 form {
     width: 670vw;
     max-width: 600px;
-    min-width: 300px;
+    min-width: 100px;
     margin: 0 auto;
+    background-color: rgba(226, 226, 226, 0.5);
+    border-radius: 30px;
 }
 fieldset {
     padding: 15px;
     border: none;
     border-bottom: 1px solid black;
+}
+label, input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+legend {
+    padding-top: 10px;
+}
+input[type="checkbox"], input[type="radio"]  {
+    margin-left: 20px;
+}
+textarea {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+input, textarea {
+    background-color: rgb(212, 212, 212);
+    color: rgb(0, 0, 0);
+    border-color: rgb(255, 255, 255);
+}
+#submit {
+    position: relative;
+    width: 50%;
+    left: 150px;
 }
