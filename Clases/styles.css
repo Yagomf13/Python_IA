@@ -50,3 +50,40 @@
     from { transform: translateY(-10px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+/* Estilos del botón de cambio de tema */
+.theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  /* Estilos del indicador del estado del tema */
+  .theme-switch::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  /* Cambiar el color del indicador cuando el tema cambia */
+  #toggle-theme:checked + .theme-switch::after {
+    transform: translateX(25px);
+  }
+  
+  /* Cambiar el fondo de la página según el estado del tema */
+  body {
+    transition: background-color 0.3s;
+  }
+  
+  #toggle-theme:checked ~ .content {
+    background-color: #333;
+    color: #fff;
+  }
