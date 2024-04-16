@@ -190,3 +190,16 @@ img {
 .image-container:hover .centered-text {
     opacity: 1;
   }
+  ::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(38, 29, 69);
+}
+::-webkit-scrollbar-thumb {
+    background: #6900ab;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: pink;
+}

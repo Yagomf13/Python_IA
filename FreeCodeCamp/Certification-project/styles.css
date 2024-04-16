@@ -19,6 +19,9 @@ fieldset {
     border: none;
     border-bottom: 1px solid black;
 }
+fieldset:last-of-type {
+    border-bottom: none
+}
 label, input {
     width: 100%;
     margin-top: 10px;
