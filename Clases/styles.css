@@ -87,3 +87,15 @@
     background-color: #333;
     color: #fff;
   }
+.container {
+  display: flex;
+  justify-content:space-between;
+  align-content: center;
+  align-items: center;
+}
+.casa {
+  margin-right: 5px;
+}
+.casa:last-of-type {
+  margin-right: 0px;
+}
