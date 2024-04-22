@@ -1,39 +1,33 @@
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
-nav {
-    z-index: 2;
+
+body{
     display: flex;
-    align-items: center;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    padding-left: 10px;
+    flex-direction: row;
+    font-size:clamp(13px, 2vw, 15px);
+}
+
+nav {
+    text-align: center;
     background-color: bisque;
-    flex-direction: column;
-    width: 250px;
     border: 1px solid;
+    padding: 40px ;
     position: fixed;
-    height: 100%;
-    padding-top: 40px;
-    
 }
 nav > ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    line-height: 100px;
-    
-    
-    
+    align-items: center;    
+    height: 100vh;
 }
 nav > ul > li {
     margin: 0 0.1rem;
-    padding: 0.1rem;
-    display: block;
-    margin-right: 126%;
-    border: 1px solid black;
-    width: 100%;
+    padding: 25px 0;
+    list-style-type: none;
 }
 
 nav > ul > li > a {
@@ -47,15 +41,76 @@ nav > ul > li > a:hover {
     border-radius: 10px;
     
 }
-#cuerpo {
-    position: absolute;
-    padding: 70px 90px;
+
+main{
     background-color: aqua;
-    width: 76.92%;
-    left: 260px;
-    top: 0px;
     height: 100%;
+    width: 100vw;
+    margin-left:100px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
 }
-.main-section {
-    width: 70%;
+
+#cuerpo{
+    width: 100%;
+    text-align: justify;
+}
+
+@media screen and (max-width: 500px){
+    nav {
+        text-align: center;
+        background-color: bisque;
+        border: 1px solid;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding: 20px;
+        z-index: 2;
+    }
+    nav > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 0px;
+    
+    }
+    nav > ul > li {
+        list-style-type: none;
+        padding: 0px;
+        margin-right: 10px;
+    }  
+    nav > ul > li:last-of-type {
+        list-style-type: none;
+        padding: 0px;
+        margin-right: 37px;
+    }      
+    main{
+        background-color: aqua;
+        width: 100%;
+        height: 100vh;
+        padding: 0px;
+        position: absolute;
+        left: 0px;
+        z-index: 1;
+        top: 56px;
+        margin-left:0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+         z-index: 1;
+    }
+    
+    #cuerpo{
+        width: 90vw;
+        text-align: justify;
+        margin: 20px auto;
+    }
+    
 }
