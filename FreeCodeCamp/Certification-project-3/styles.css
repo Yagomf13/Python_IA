@@ -59,8 +59,3 @@ nav > ul > li > a:hover {
 .main-section {
     width: 70%;
 }
-@media screen {max-width: 100px;
-    nav {
-        max-width: 200px;
-    }
-}
