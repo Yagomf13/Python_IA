@@ -1,0 +1,17 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav > ul{
+    display: flex;
+    flex-direction: row;
+}
+nav > ul > li {
+    display: block;
+}
+@media screen (max-width:333px){
+    nav {
+        width: 100%;
+    }
+}
