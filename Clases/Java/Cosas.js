@@ -56,6 +56,32 @@ function findGreaterOrEqual(a, b) {        // funcion que devuelve un string con
 }
 console.log(findGreaterOrEqual(2, 3));
 
+let obj = {
+  name:"FreeCodeCamp",
+  review:"Awesome"
+};
+Object.freeze(obj);                        // Object.freeze() congela un objeto e impide que se modifiquen sus propiedades.
+
+const myFunc = () => {                     // forma de declarar una funcion. Si no le quieres poner nombre a la funcion, se le pone una funcion anonima.
+  const myVar = "value";
+  return myVar;
+}
+
+const increment = (number, value = 1) => number + value;  //si el value no se declara se le pasa un valor por defecto
+
+var arr = [6, 89, 3, 45];
+var maximus = Math.max.apply(null, arr);          //dice el valor maximo de un array.
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+arr2 = [...arr1];                               // copia el array arr1 en arr2.
+
+
+
+
+
+
+
 
 
 
@@ -154,6 +180,50 @@ function rangeOfNumbers(startNum, endNum) {
   }
 };
 
+// Ejemplo 6
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
 
+// Ejemplo 7
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+const {today, tomorrow} = HIGH_TEMPERATURES;
 
+// Ejemplo 8
+function removeFirstTwo(list) {                         // elimina los primeros 2 elementos de un array y devuelve el resto.
+  const [a,b,...shorterlist] = list          
+  return shorterlist;
+}
 
+// Ejemplo 9
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+const half = ({max, min}) => (max + min) / 2.0;        // selecciona los valores max y min del objeto stats y los divide entre 2.
+
+// Ejemplo 10
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {                              // devuelve un array con los valores de un objeto.
+  // Only change code below this line
+  const failureItems = [];
+  for ( let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    let str = `<li class="text-warning">${arr[i]}</li>`;
+    failureItems.push(str)
+  // Only change code above this line
+  }
+  return failureItems;
+}
