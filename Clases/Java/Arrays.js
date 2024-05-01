@@ -25,6 +25,29 @@ for (let i = 0; i < 5; i++) {
     array4.unshift(i);
 }
 
+// splice borra elementos del array.
+let array = ['today', 'was', 'not', 'so', 'great'];
+array.splice(2, 2);
+
+// splice sustituye elementos del array.
+function htmlColorNames(arr) {
+    arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
+    return arr;
+}
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+// slice crea una copia del array.
+let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
+let todaysWeather = weatherConditions.slice(1, 3);
+
+// [...thisArray] crea una copia del array.
+let thisArray = [true, true, undefined, false, null];
+let thatArray = [...thisArray];
+
+// indexOf busca un elemento en un array y devuelve su posicion. -1 si no lo encuentra.
+let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+fruits.indexOf('dates');
+
 // while crea un bucle que esta definido por la variable i que va de 0
 //borra elecemntos hasta que se cumpla esa condicion, que el while de se detiene
 while (array.length > 2) {

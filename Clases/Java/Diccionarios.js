@@ -9,6 +9,14 @@ var persona = {
     console.log('El objeto persona no tiene la propiedad "nombre"');
 }
 
+// in comprueba si un objeto tiene una propiedad especificada.
+var persona = {
+    nombre: 'Yago',
+    edad: 20,
+    ciudad: 'Barcelona'
+}
+Yago in persona;
+
 // Object.freeze() congela un objeto e impide que se modifiquen sus propiedades.
 let obj = {
     name: "FreeCodeCamp",
@@ -16,6 +24,27 @@ let obj = {
 };
 Object.freeze(obj);
 
+ //Object.keys() devuelve un array con todas las propiedades de un objeto.
+let users = {
+    Alan: {
+      age: 27,
+      online: false
+    },
+    Jeff: {
+      age: 32,
+      online: true
+    },
+    Sarah: {
+      age: 48,
+      online: false
+    },
+    Ryan: {
+      age: 19,
+      online: true
+    }
+  };
+function getArrayOfUsers(obj) {
+  return Object.keys(obj)}
 
 // Ejemplos
 
@@ -87,3 +116,29 @@ function makeList(arr) {                              // devuelve un array con l
     }
     return failureItems;
 }
+
+// Ejemplo 3
+
+const users = {
+    Alan: {
+      online: false
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: false
+    }
+  }
+  
+  function countOnline(allUsers) {
+    let count = 0;
+  for (let person in allUsers) {
+    if (allUsers[person].online) {
+      count++
+    }
+  }
+  return count
+  }
+  
+  console.log(countOnline(users));
