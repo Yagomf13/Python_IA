@@ -1,0 +1,9 @@
+function rot13(str) {
+    let alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "v", "W", "X", "Y", "z"];
+    let cadena = str.split("");
+    
+    console.log(cadena);
+    
+}
+
+rot13("SERR PBQR PNZC");

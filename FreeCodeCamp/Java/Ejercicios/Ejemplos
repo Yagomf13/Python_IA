@@ -1,0 +1,51 @@
+//le da la vuelta a una array
+const reverseString = s => [...s].reverse().join('')
+  console.log(reverseString("hello"))
+
+// importas una array y una funcion y te devuelve el primer valor que cumpla la función enviada
+//.find busca en la función el primero que la cumpla
+const findElement = (arr, func) => arr.find(func)
+
+
+// busca si el valor de la función es una boolean
+function booWho(bool) {
+    return typeof bool == "boolean";
+}
+
+
+// Te pone en mayusculas la primera letra
+//.map es como un bucle
+const titleCase = str =>
+    str.split(' ')
+        .map(element => element.slice(0, 1).toUpperCase() +
+            element.slice(1).toLowerCase())
+        .join(' ')
+
+
+//coje los valores de dos arrays y los intercambia dependiendo de n
+const frankenSplice = (arr1, arr2, n) =>
+    [...arr2.slice(0, n), ...arr1, ...arr2.slice(n)]
+
+
+//coje valores de una array y elimina los que son errores 
+const bouncer = arr =>
+    arr.filter(element => element)
+
+
+//te dice cuantos numeros son menores que num
+//concat une dos array
+//sort las ordena si a - b da negativo les cambia el orden
+//indexOf te da la posicion en la array 
+const getIndexToIns = (arr, num) =>
+    arr.concat(num).sort((a, b) => a - b).indexOf(num)
+
+
+//mira si la array 1 contiene las letras de la 2
+const mutation = ([a, b]) =>
+    [...b.toLowerCase()].every(element => a.toLowerCase().includes(element))
+
+
+//divide una array en el diferentes de tamaño size
+//Math.ceil redondea para arriba
+const chunkArrayInGroups = (arr, size) =>
+    Array.from({ length: Math.ceil(arr.length / size) }, (_, index) => arr.slice(size * index, size * index + size))
