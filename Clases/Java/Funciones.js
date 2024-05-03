@@ -7,6 +7,12 @@ const myFunc = () => {
 //si el value no se declara se le pasa un valor por defecto
 const increment = (number, value = 1) => number + value;
 
+// Crea una funcion anonima que se ejecuta inmediatamente.
+(function () {
+    console.log("A cozy nest is ready")
+  })()
+
+
 // Ejemplos
 
 // Ejemplo 1
@@ -88,3 +94,28 @@ const thermos = new Thermostat(76); // Setting in Fahrenheit scale
 let temp = thermos.temperature; // 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
+
+// Ejemplo 9
+
+let funModule = ( function() {                                    // Definimos un module
+    return {
+      isCuteMixin: function(obj) {
+        obj.isCute = function() {
+          return true;
+        };
+      },
+      singMixin: function(obj) {
+        obj.sing = function() {
+          console.log("Singing to an awesome tune");
+        };
+      }
+    }
+  })();
+  
+  let Bird = function () { }
+  
+  let duck = new Bird()
+  
+  funModule.singMixin(duck)
+  duck.sing()
+  
