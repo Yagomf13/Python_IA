@@ -1,20 +1,40 @@
 function rot13(str) {
-    let alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "v", "W", "X", "Y", "z"];
-    let letras = []
-    final = [
-    ]
-    for (let letra of str) {
-        letras.push(letra);
-    }
-    for (let letrita in letras) {
-        for (let i = 0; i == alfabeto.length; i++) {
-            if (alfabeto[i] == letrita) {
-                let j = i+13;
-                final.push(letrita);
-            }
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let decoded = "";
+    
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        let charIndex = alphabet.indexOf(char);
+        
+        if (charIndex === -1) {  
+            // Si el carácter no está en el alfabeto, mantenerlo sin cambios
+            decoded += char;
+        } else {
+            // Decodificar el carácter
+            let decodedIndex = (charIndex - 13 + alphabet.length) % alphabet.length;
+            decoded += alphabet[decodedIndex];
         }
     }
     
-    console.log(final);
+    return decoded;
 }
-rot13("SERR PBQR PNZC");
+console.log(rot13("SERR PBQR PNZC"));
+
+// function rot13(str) {
+//     let alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//     let letras = []
+//     final = []
+//     for (let letra of str) {
+//         letras.push(letra);
+//     }
+//     for (let caracter of letras) {
+//         for (let i = 0; i < alfabeto.length; i++) {
+//             if (alfabeto[i] == caracter) {
+//                 let j = (i + 13) % alfabeto.length;
+//                 final.push(alfabeto[j]);
+//             }
+//         }
+//     }
+    
+//     console.log(final);
+// }
