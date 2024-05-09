@@ -1,6 +1,6 @@
 //le da la vuelta a una array
 const reverseString = s => [...s].reverse().join('')
-  console.log(reverseString("hello"))
+console.log(reverseString("hello"))
 
 // importas una array y una funcion y te devuelve el primer valor que cumpla la función enviada
 //.find busca en la función el primero que la cumpla
@@ -9,27 +9,27 @@ const findElement = (arr, func) => arr.find(func)
 
 // busca si el valor de la función es una boolean
 function booWho(bool) {
-    return typeof bool == "boolean";
+  return typeof bool == "boolean";
 }
 
 
 // Te pone en mayusculas la primera letra
 //.map es como un bucle
 const titleCase = str =>
-    str.split(' ')
-        .map(element => element.slice(0, 1).toUpperCase() +
-            element.slice(1).toLowerCase())
-        .join(' ')
+  str.split(' ')
+    .map(element => element.slice(0, 1).toUpperCase() +
+      element.slice(1).toLowerCase())
+    .join(' ')
 
 
 //coje los valores de dos arrays y los intercambia dependiendo de n
 const frankenSplice = (arr1, arr2, n) =>
-    [...arr2.slice(0, n), ...arr1, ...arr2.slice(n)]
+  [...arr2.slice(0, n), ...arr1, ...arr2.slice(n)]
 
 
 //coje valores de una array y elimina los que son errores 
 const bouncer = arr =>
-    arr.filter(element => element)
+  arr.filter(element => element)
 
 
 //te dice cuantos numeros son menores que num
@@ -37,87 +37,110 @@ const bouncer = arr =>
 //sort las ordena si a - b da negativo les cambia el orden
 //indexOf te da la posicion en la array 
 const getIndexToIns = (arr, num) =>
-    arr.concat(num).sort((a, b) => a - b).indexOf(num)
+  arr.concat(num).sort((a, b) => a - b).indexOf(num)
 
 
 //mira si la array 1 contiene las letras de la 2
 const mutation = ([a, b]) =>
-    [...b.toLowerCase()].every(element => a.toLowerCase().includes(element))
+  [...b.toLowerCase()].every(element => a.toLowerCase().includes(element))
 
 
 //divide una array en el diferentes de tamaño size
 //Math.ceil redondea para arriba
 const chunkArrayInGroups = (arr, size) =>
-    Array.from({ length: Math.ceil(arr.length / size) }, (_, index) => arr.slice(size * index, size * index + size))
+  Array.from({ length: Math.ceil(arr.length / size) }, (_, index) => arr.slice(size * index, size * index + size))
 
 
 // te busca el titulo y el rating y te lo duvelve con la función map
 // filter te muestra unicamente los que tienen un rating igual o superior a 80
-    {
-      "Title": "Inception",
-      "Year": "2010",
+{
+  "Title": "Inception",
+    "Year": "2010",
       "Rated": "PG-13",
-      "Released": "16 Jul 2010",
-      "Runtime": "148 min",
-      "Genre": "Action, Adventure, Crime",
-      "Director": "Christopher Nolan",
-      "Writer": "Christopher Nolan",
-      "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
-      "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
-      "Language": "English, Japanese, French",
-      "Country": "USA, UK",
-      "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.",
-      "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-      "Metascore": "74",
-      "imdbRating": "8.8",
-      "imdbVotes": "1,446,708",
-      "imdbID": "tt1375666",
-      "Type": "movie",
-      "Response": "True"
-    }
+        "Released": "16 Jul 2010",
+          "Runtime": "148 min",
+            "Genre": "Action, Adventure, Crime",
+              "Director": "Christopher Nolan",
+                "Writer": "Christopher Nolan",
+                  "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+                    "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+                      "Language": "English, Japanese, French",
+                        "Country": "USA, UK",
+                          "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.",
+                            "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+                              "Metascore": "74",
+                                "imdbRating": "8.8",
+                                  "imdbVotes": "1,446,708",
+                                    "imdbID": "tt1375666",
+                                      "Type": "movie",
+                                        "Response": "True"
+}
   ];
 
-  const filteredList = watchList.map(movies => ({title: movies["Title"], rating: movies["imdbRating"]})).filter(movies => movies.rating >= 8.0);
+const filteredList = watchList.map(movies => ({ title: movies["Title"], rating: movies["imdbRating"] })).filter(movies => movies.rating >= 8.0);
 
-  // te devuelve la media de las peliculas de christofer nolan mediante la funcion reduce
-  function getRating(watchList) {
-    let movieFilter = watchList.filter(movies => movies["Director"] == "Christopher Nolan")
-    
-    let ratings = movieFilter.map(movies => Number(movies["imdbRating"]))
-    
-    let sumRatings = ratings.reduce((sum, rating) => sum + rating);
-  
-    let averageRating = sumRatings / movieFilter.length;
-  
-    return averageRating;
-  }
+// te devuelve la media de las peliculas de christofer nolan mediante la funcion reduce
+function getRating(watchList) {
+  let movieFilter = watchList.filter(movies => movies["Director"] == "Christopher Nolan")
 
-  // te devuelve al cuadrado los valores de una array que sean positivos y que no tengan decimales
-  const squareList = arr => {
-    let enteros = arr.filter(numeros => numeros > 0 && Number.isInteger(numeros)).map(numeros => numeros ** 2)
-    return enteros;
-  };
+  let ratings = movieFilter.map(movies => Number(movies["imdbRating"]))
+
+  let sumRatings = ratings.reduce((sum, rating) => sum + rating);
+
+  let averageRating = sumRatings / movieFilter.length;
+
+  return averageRating;
+}
+
+// te devuelve al cuadrado los valores de una array que sean positivos y que no tengan decimales
+const squareList = arr => {
+  let enteros = arr.filter(numeros => numeros > 0 && Number.isInteger(numeros)).map(numeros => numeros ** 2)
+  return enteros;
+};
 
 // ordena alfabeticamente con sort
-  function alphabeticalOrder(arr) {
-    arr.sort(function(a, b) {
-      return a === b ? 0 : a > b ? 1 : -1;
-    })
-    return arr
-  }
-  //Si compareFunction(a,b) devuelve un valor menor que 0 para dos elementos a y b, entonces a irá antes que b. Si compareFunction(a,b) devuelve un valor mayor a 0 para dos elementos a y b, entonces b irá antes que a. Si compareFunction(a,b) devuelve un valor igual a 0 para dos elementos a y b, entonces a y b se dejarán sin cambios.
+function alphabeticalOrder(arr) {
+  arr.sort(function (a, b) {
+    return a === b ? 0 : a > b ? 1 : -1;
+  })
+  return arr
+}
+//Si compareFunction(a,b) devuelve un valor menor que 0 para dos elementos a y b, entonces a irá antes que b. Si compareFunction(a,b) devuelve un valor mayor a 0 para dos elementos a y b, entonces b irá antes que a. Si compareFunction(a,b) devuelve un valor igual a 0 para dos elementos a y b, entonces a y b se dejarán sin cambios.
 
 //Crea una array con los elementos separados cuando haya un elemento que no sea alfanumerico
-  function splitify(str) {
-    let arreglo = str.split(/\W/);
-    return arreglo
-   
-  }
+function splitify(str) {
+  let arreglo = str.split(/\W/);
+  return arreglo
+}
+
+//reemplaza espacios por - para url
+function urlSlug(title) {
+  let lowerCaseTitle = title.toLowerCase();
+  let splitTitle = lowerCaseTitle.split(" ");
+  let filterTitle = splitTitle.filter(element => element != "");
+  let hyphenTitle = filterTitle.join("-");
+  return hyphenTitle
+}
+
+// every comprueba todos los elementos y devuelve un booleano diciendo si se cumple una condicion o no
+function checkPositive(arr) {
+  let a = arr.every(numero => numero >= 0)
+  return a
+}
+
+// some comprueba si algun elemento cumple una condicion y devuelve un booleano
+function checkPositive(arr) {
+let a = arr.some(numero => numero >= 0)
+return a
+}
+
+// Una funcion curried es como una función con un solo parametro pero que haces que admita varios
+function add(x) {
+  let curried = y => z => x + y+ z;
+  return curried
+}
 
 
+//Como vimos en el último desafío, el método slice no muta el arreglo original, pero devuelve uno nuevo que puede ser guardado en una variable. Recuerda que el método slice recibe dos argumentos para indicar el comienzo y el final del segmento (el final es no inclusivo) y retorna estos elementos en un nuevo arreglo. Usar el método slice en lugar de splice ayuda a prevenir cualquier efecto colateral de mutar un arreglo.
 
-
-
-  //Como vimos en el último desafío, el método slice no muta el arreglo original, pero devuelve uno nuevo que puede ser guardado en una variable. Recuerda que el método slice recibe dos argumentos para indicar el comienzo y el final del segmento (el final es no inclusivo) y retorna estos elementos en un nuevo arreglo. Usar el método slice en lugar de splice ayuda a prevenir cualquier efecto colateral de mutar un arreglo.
-
-  //el método concat como una forma de unir varios arreglos en uno nuevo sin alterar los arreglos originales. Compara concat con el método push. push añade elementos al final del propio arreglo sobre el que es invocado, alterando dicho arreglo. Aquí hay un ejemplo:
+//el método concat como una forma de unir varios arreglos en uno nuevo sin alterar los arreglos originales. Compara concat con el método push. push añade elementos al final del propio arreglo sobre el que es invocado, alterando dicho arreglo. Aquí hay un ejemplo:

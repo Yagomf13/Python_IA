@@ -17,7 +17,8 @@ let result = unRegex.test(exampleStr);
 // [ ] es para buscar cualquier caracter dentro de los corchetes.
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
 let vowelRegex = /[aeiou]/gi; 
-let result = quoteSample.match(vowelRegex); 
+let result = quoteSample.match(vowelRegex);
+console.log(result);
 
 // [a-z] es para buscar cualquier caracter dentro de los corchetes.
 let quoteSample = "Blueberry 3.141592653s are delicious.";
@@ -78,7 +79,7 @@ let result = ohRegex.test(ohStr);
 
 // ? es para buscar palabras que contengan o no el caracter que le sigue.
 let favWord = "favorite";
-let favRegex = /favou?rite/; // Cambia esta línea
+let favRegex = /favou?rite/; 
 let result = favRegex.test(favWord);
 
 // replace reemplaza las coincidencias del regex por $3 $2 $1 que son las palabras al reves
@@ -86,6 +87,7 @@ let str = "one two three";
 let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Cambia esta línea
 let replaceText = "$3 $2 $1"; // Cambia esta línea
 let result = str.replace(fixRegex, replaceText);
+console.log(result);
 
 
 
