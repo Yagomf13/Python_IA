@@ -52,6 +52,7 @@ const chunkArrayInGroups = (arr, size) =>
 
 
 // te busca el titulo y el rating y te lo duvelve con la función map
+// filter te muestra unicamente los que tienen un rating igual o superior a 80
     {
       "Title": "Inception",
       "Year": "2010",
@@ -76,4 +77,47 @@ const chunkArrayInGroups = (arr, size) =>
     }
   ];
 
-  const ratings = watchList.map(movie => ({title: movie.Title, rating: movie.imdbRating}))
+  const filteredList = watchList.map(movies => ({title: movies["Title"], rating: movies["imdbRating"]})).filter(movies => movies.rating >= 8.0);
+
+  // te devuelve la media de las peliculas de christofer nolan mediante la funcion reduce
+  function getRating(watchList) {
+    let movieFilter = watchList.filter(movies => movies["Director"] == "Christopher Nolan")
+    
+    let ratings = movieFilter.map(movies => Number(movies["imdbRating"]))
+    
+    let sumRatings = ratings.reduce((sum, rating) => sum + rating);
+  
+    let averageRating = sumRatings / movieFilter.length;
+  
+    return averageRating;
+  }
+
+  // te devuelve al cuadrado los valores de una array que sean positivos y que no tengan decimales
+  const squareList = arr => {
+    let enteros = arr.filter(numeros => numeros > 0 && Number.isInteger(numeros)).map(numeros => numeros ** 2)
+    return enteros;
+  };
+
+// ordena alfabeticamente con sort
+  function alphabeticalOrder(arr) {
+    arr.sort(function(a, b) {
+      return a === b ? 0 : a > b ? 1 : -1;
+    })
+    return arr
+  }
+  //Si compareFunction(a,b) devuelve un valor menor que 0 para dos elementos a y b, entonces a irá antes que b. Si compareFunction(a,b) devuelve un valor mayor a 0 para dos elementos a y b, entonces b irá antes que a. Si compareFunction(a,b) devuelve un valor igual a 0 para dos elementos a y b, entonces a y b se dejarán sin cambios.
+
+//Crea una array con los elementos separados cuando haya un elemento que no sea alfanumerico
+  function splitify(str) {
+    let arreglo = str.split(/\W/);
+    return arreglo
+   
+  }
+
+
+
+
+
+  //Como vimos en el último desafío, el método slice no muta el arreglo original, pero devuelve uno nuevo que puede ser guardado en una variable. Recuerda que el método slice recibe dos argumentos para indicar el comienzo y el final del segmento (el final es no inclusivo) y retorna estos elementos en un nuevo arreglo. Usar el método slice en lugar de splice ayuda a prevenir cualquier efecto colateral de mutar un arreglo.
+
+  //el método concat como una forma de unir varios arreglos en uno nuevo sin alterar los arreglos originales. Compara concat con el método push. push añade elementos al final del propio arreglo sobre el que es invocado, alterando dicho arreglo. Aquí hay un ejemplo:

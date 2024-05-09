@@ -1,4 +1,5 @@
 .banner {
+    transition: top 0.4s;
     position: fixed;
     top: 0;
     left: 0;
