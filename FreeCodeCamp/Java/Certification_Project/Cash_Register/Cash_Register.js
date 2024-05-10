@@ -19,10 +19,21 @@ function checkCashRegister(price, cash, cid) {
     const sumaPorValor = {};
 
     for (let i = 0; i < cid.length; i++) {
-        efectivo.unshift(cid[i][1]);
-        totalEfectivo += cid[i][1];
+        if (cid[i][0] == "PENNY" || cid[i][0] == "NICKEL") {
+            let monedaChiquita = cid[i][1] * 100;
+            efectivo.unshift(monedaChiquita);
+            totalEfectivo += monedaChiquita;
+        } if (cid[i][0] == "DIME" || cid[i][0] == "QUARTER") {
+            let monedaMedia = (cid[i][1] * 10);
+            efectivo.unshift(monedaMedia);
+            totalEfectivo += monedaMedia;
+        } else {
+            efectivo.unshift(cid[i][1]);
+            totalEfectivo += cid[i][1];
+        }
     }
-
+    totalEfectivo = Number(totalEfectivo.toFixed(2));
+    
     for (let i = 0; i < efectivo.length; i++) {
         while (cambioDado >= valorDeLasMonedas[i]) {
             if (valorDeLasMonedas[i] <= cambioDado) {
@@ -41,7 +52,7 @@ function checkCashRegister(price, cash, cid) {
 
     
 
-    console.log(efectivo, dineroDado);
+    console.log(efectivo, totalEfectivo);
     
 }
  
