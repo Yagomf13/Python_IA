@@ -130,13 +130,13 @@ function checkPositive(arr) {
 
 // some comprueba si algun elemento cumple una condicion y devuelve un booleano
 function checkPositive(arr) {
-let a = arr.some(numero => numero >= 0)
-return a
+  let a = arr.some(numero => numero >= 0)
+  return a
 }
 
 // Una funcion curried es como una función con un solo parametro pero que haces que admita varios
 function add(x) {
-  let curried = y => z => x + y+ z;
+  let curried = y => z => x + y + z;
   return curried
 }
 
