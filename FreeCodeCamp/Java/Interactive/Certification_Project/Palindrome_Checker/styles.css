@@ -1,0 +1,48 @@
+body {
+    background-color: #574d4f;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#container {
+    width: 70vh;
+    height: 50vh;
+    background-color: #ffe999;
+    margin: 10% auto;
+    border-radius: 10px;
+    padding: 5px 30px;
+}
+h1, h2{
+    color: #969091;
+    text-align: center;
+}
+#palindromo-container {
+    text-align: center;
+    width: 70%;
+    height: 45%;
+    margin: 10% auto;
+    border-radius: 10px;
+    padding: 2px 30px;
+    background-color: #ffffff;
+}
+#text-input {
+    margin-right: 10px;
+    border: none;
+    border-bottom:  2px solid #ffd952;
+    color: #574d4f;
+    font-size: larger;
+}
+p {
+    color: #574d4f;
+    font-size: larger;
+}
+#check-btn {
+    background-color: #ffd952;
+    border-radius: 20px;
+    border: none !important;
+    padding: 10px;
+    cursor: pointer;
+    color: #574d4f;
+}
+#result {
+    padding-top: 25px;
+    font-size: 1.5rem;
+}
