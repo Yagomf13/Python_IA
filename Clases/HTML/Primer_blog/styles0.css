@@ -1,0 +1,206 @@
+.banner {
+    transition: top 0.4s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    background-color: #6900ab; 
+    color: white; 
+    padding: 10px; 
+}
+.main_icon, .icono, .main_title{
+    display: inline-block;
+}
+.main_icon {
+    width: 33%;
+    padding-top: 10px;
+}
+.icono {
+    text-align: right;
+    width: 65.5%;
+    position: fixed;
+    top: 20px;
+}
+.casa{
+    text-align: left;
+    padding-top: 12px;
+    text-decoration: none;
+    background-color: #6900ab;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    padding-right: 13px;
+    padding-top: 18px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.casa:hover, .widget:hover {
+    filter: brightness(150%);
+}
+.main_title{
+    text-align: center;
+    width: 32%;
+    position: fixed;
+    top: 0px;
+}
+.widget {
+    width: 35px;
+    text-decoration: none;
+    padding-right: 10px;
+    background-color: #6900ab;
+    
+    padding-left: 13px;
+    padding-top: 42px;
+    padding-bottom: 5px;
+}
+body {
+    background-image: url(Cosmere.jpg);
+    font-family: sans-serif;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.fondo{
+    width: 80%;
+    background-color: rgb(38, 29, 69);
+    margin-left: auto;
+    margin-right: auto;    
+    padding: 20px;
+    max-width: 650px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+h1,h2,h3{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+}
+.subtitulo{
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-style: italic;
+}
+p {
+    font-size: 90%;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+
+}
+hr{
+    height: 1px;
+    background-color: white;
+    border-color: white;
+    margin-top: 20px;
+    }
+.titulo{
+    padding-top: 10px;
+    text-shadow: 1px 2px 4px grey;
+}
+.Autor {
+    margin-left: 5%;
+}
+
+.entrada,ol{
+    line-height: 25px;
+    text-align:justify;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+ol{
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+footer{
+    text-align: center;
+    font-size: 12px;   
+}
+a {
+    color: rgb(173, 246, 246);
+}
+a:visited {
+    color: rgb(173, 246, 218);
+  }
+  
+  a:hover {
+    color: rgb(223, 13, 191);
+  }
+  
+  a:active {
+    color: rgb(173, 246, 246);
+  }
+.botones a {
+    display: inline-block;
+ }
+.anterior {
+    
+    text-align: left;
+    width: 49%;
+}
+  
+.siguiente {
+    text-align: right;
+    width: 49%;
+ }
+ .container {
+    text-align: center;
+}
+
+.container img {
+    display: block;
+    margin: 0 auto;
+}
+.sagas {
+    font-size: 90%;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 25px;
+}
+img {
+    padding-bottom: 10px;
+    transition: filter 0.3s ease;
+    border-radius: 20px
+}
+.imagenes img:hover {
+    filter: brightness(50%);
+}
+.image-container {
+    position: relative;
+    margin: 0 2px; width: 30.5%;
+    overflow: hidden;
+    display: inline-block;
+  }
+.image-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    font-family:'Times New Roman', Times, serif;
+  }
+.image-container:hover .centered-text {
+    opacity: 1;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(38, 29, 69);
+}
+::-webkit-scrollbar-thumb {
+    background: #6900ab;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: pink;
+}
