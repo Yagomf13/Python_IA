@@ -10,3 +10,8 @@ ctrl + shft + P = Ver todas las cosas de VS code
 ctrl + J = abrir terminal
 Alt + Z = agrupar lineas
 Ctrl + Ç = Comentario
+
+//! ERROR
+//* IMPORTANTE
+//? PREGUNTA
+//TODO PARA HACER
