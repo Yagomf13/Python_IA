@@ -1,0 +1,71 @@
+body {
+    background-color: #574d4f;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#container {
+    width: 70vh;
+    height: 40vh;
+    background-color: #ffe999;
+    margin: 10% auto;
+    border-radius: 10px;
+    padding: 5px 30px;
+}
+h1, h2{
+    color: #969091;
+    text-align: center;
+}
+#Numeral-container {
+    text-align: center;
+    width: 70%;
+    height: 35%;
+    margin: 0px auto;
+    border-radius: 10px;
+    padding: 2px 30px;
+    background-color: #ffffff;
+}
+#number {
+    margin-right: 10px;
+    border: none;
+    border-bottom:  2px solid #ffd952;
+    color: #574d4f;
+    font-size: larger;
+    text-align: center;
+}
+p {
+    color: #574d4f;
+    font-size: larger;
+}
+#convert-btn {
+    background-color: #ffd952;
+    border-radius: 20px;
+    border: none !important;
+    padding: 10px;
+    cursor: pointer;
+    color: #574d4f;
+}
+#result {
+    padding-top: 25px;
+    font-size: 1.5rem;
+}
+#output {
+    text-align: center;
+    width: 70%;
+    height: 15%;
+    margin: 5% auto;
+    border-radius: 10px;
+    padding-top: 6%;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #ffffff;
+    font-size: larger;
+    display: none;
+}
+.alerta {
+    font-size: 2rem !important;
+    background-color: var(--danger-background) !important;
+    border: 3px solid var(--danger-color) !important;
+    color: var(--danger-color) !important;
+}
+.invalid-background {
+    background-color: red;
+}
