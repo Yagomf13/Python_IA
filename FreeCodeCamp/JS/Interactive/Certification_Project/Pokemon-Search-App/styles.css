@@ -1,0 +1,32 @@
+body {
+    background-color: #ffa446;
+}
+#container {
+    margin: 4% auto;
+    background-color:#ffbe7d;
+    padding: 4% 0;
+    width: 90%;
+    border-radius: 100px;
+    
+}
+form {
+    text-align: center;
+}
+#photo {
+    text-align: center;
+}
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    background-color:#b08d88;
+
+}
+th {
+    background-color:#a95a52;
+}

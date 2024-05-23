@@ -12,7 +12,7 @@ const defense = document.getElementById("defense");
 const specialAttack = document.getElementById("special-attack");
 const specialDefense = document.getElementById("special-defense");
 const speed = document.getElementById("speed");
-const output = document.getElementById("sprite");
+const output = document.getElementById("photo");
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -71,19 +71,24 @@ button.addEventListener("click", (event) => {
             if (result !== "Pokémon not found") {
                 apiPersonal(result).then(habilidades => {
                     if (habilidades) {
-                        pokemonName.innerText = `Name: ${capitalizeFirstLetter(habilidades.name)}`;
-                        pokemonId.innerText = `ID: #${habilidades.id}`;
-                        weight.innerText = `Weight: ${habilidades.weight}`;
-                        height.innerText = `Height: ${habilidades.height}`;
-                        types.innerText = `Types: ${habilidades.type1.toUpperCase()} ${habilidades.type2 ? 'and ' + habilidades.type2.toUpperCase() : ''}`;
-                        hp.innerText = `HP: ${habilidades.hp}`;
-                        attack.innerText = `Attack: ${habilidades.attack}`;
-                        defense.innerText = `Defense: ${habilidades.defense}`;
-                        specialAttack.innerText = `Special Attack: ${habilidades.xattack}`;
-                        specialDefense.innerText = `Special Defense: ${habilidades.xdefense}`;
-                        speed.innerText = `Speed: ${habilidades.speed}`;
-                        output.innerHTML = `<img src="${habilidades.sprite}" alt="${habilidades.name}"/>`;
-                    }
+                        pokemonName.innerText = `${capitalizeFirstLetter(habilidades.name)}`;
+                        pokemonId.innerText = `${habilidades.id}`;
+                        weight.innerText = `${habilidades.weight}`;
+                        height.innerText = `${habilidades.height}`;
+                        
+                        let typeHtml = `<span class="type ${habilidades.type1.toLowerCase()}">${habilidades.type1.toUpperCase()}</span>`;
+                        if (habilidades.type2) {
+                            typeHtml += ` <span class="type ${habilidades.type2.toLowerCase()}">${habilidades.type2.toUpperCase()}</span>`;
+                        }
+                        types.innerHTML = typeHtml;
+
+                        hp.innerText = `${habilidades.hp}`;
+                        attack.innerText = `${habilidades.attack}`;
+                        defense.innerText = `${habilidades.defense}`;
+                        specialAttack.innerText = `${habilidades.xattack}`;
+                        specialDefense.innerText = `${habilidades.xdefense}`;
+                        speed.innerText = `${habilidades.speed}`;
+                        output.innerHTML = `<img src="${habilidades.sprite}" alt="${habilidades.name}" id="sprite" width="200" height="200"/>`;                    }
                 });
             } else {
                 alert(result);
