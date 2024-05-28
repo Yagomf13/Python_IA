@@ -1,0 +1,33 @@
+<style type='text/scss'>
+// Definición de la lista de colores
+$colors: blue, black, red;
+
+// Uso de la directiva @each para iterar sobre cada color
+@each $color in $colors {
+  .#{$color}-bg {
+    background-color: $color;
+  }
+}
+.blue-bg {
+  background-color: blue;
+}
+
+.black-bg {
+  background-color: black;
+}
+
+.red-bg {
+  background-color: red;
+}
+
+
+
+  div {
+    height: 200px;
+    width: 200px;
+  }
+</style>
+
+<div class="blue-bg"></div>
+<div class="black-bg"></div>
+<div class="red-bg"></div>
