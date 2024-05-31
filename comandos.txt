@@ -10,6 +10,8 @@ ctrl + shft + P = Ver todas las cosas de VS code
 ctrl + J = abrir terminal
 Alt + Z = agrupar lineas
 Ctrl + Ç = Comentario
+Ctrl + Space = Acceso rapido a carpetas
+Crtl + Shift + P => wrap will abreviation = meter dentro de etiqueta
 
 //! ERROR
 //* IMPORTANTE
