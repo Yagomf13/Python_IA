@@ -37,4 +37,4 @@ class Fruits extends React.Component {
       );
     }
   };
-  
+  ReactDOM.render(<TypesOfFood />, document.getElementById("Vegetables"));
